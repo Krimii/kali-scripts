@@ -32,7 +32,7 @@ anonsurf(){
 			cd '/root/Desktop'
 			git clone 'https://github.com/Und3rf10w/kali-anonsurf.git'
 			cd 'kali-anonsurf'
-			cat ./installer.sh
+			./installer.sh
 		;;
 	esac
 }
