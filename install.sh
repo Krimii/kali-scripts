@@ -28,8 +28,7 @@ anonsurf(){
 	case $YES in
 		y | Y)
 			printf "${BLUE}Installing anonsurf... ${NC} \n"
-			#cd '/root/Downloads'
-			cd '/root/Desktop'
+			cd '/root/Downloads'
 			git clone 'https://github.com/Und3rf10w/kali-anonsurf.git'
 			cd 'kali-anonsurf'
 			./installer.sh
