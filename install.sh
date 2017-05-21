@@ -36,11 +36,49 @@ anonsurf(){
 	esac
 }
 
+alsamixer(){
+	printf "${BLUE}[+] ${GREEN}Do you want to install alsamixer? [Y/N] ${NC}"
+	read YES
+
+	case $YES in
+		y | Y)
+			printf "${BLUE}Installing alsamixer... ${NC} \n"
+			apt-get install libasound2 alsa-utils alsa-oss 
+		;;
+	esac
+}
+
+menu(){
+	printf "${BLUE}[+] ${GREEN}Do you want to install Main Menu? [Y/N] ${NC}"
+	read YES
+
+	case $YES in
+		y | Y)
+			printf "${BLUE}Installing Main Menu... ${NC} \n"
+			apt-get install alacarte 
+		;;
+	esac
+}
+
+ferret(){
+	printf "${BLUE}[+] ${GREEN}Do you want to install ferret? [Y/N] ${NC}"
+	read YES
+
+	case $YES in
+		y | Y)
+			printf "${BLUE}Installing ferret... ${NC} \n"
+			dpkg --add-architecture i386 && apt-get update && apt-get install ferret-sidejack:i386
+		;;
+	esac
+}
 
 # Main
 
 sublime
 anonsurf
+alsamixer
+ferret
+menu
 
 
 
